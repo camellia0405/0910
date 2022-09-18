@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO | Javascript</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="outer-wrapper">
+    <h1>TODO APP</h1>
+
+    <section class="input-section">
+      <!-- Todo入力エリア -->
+      <div class="input-form-wrapper">
+        <form onsubmit="return false;">
+          <input type="text" id="inputTodo" placeholder="Todoを入力">
+          <select id="category">
+            <option value="0" default>-選択してください-</option>
+            <option value="仕事">仕事</option>
+            <option value="プライベート">プライベート</option>
+            <option value="家族">家族</option>
+            <option value="その他">その他</option>
+          </select>
+          <button id="addButton" class="add-button">登録</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 未完了のTodo -->
+    <section class="incomplete-section" id="unfinished">
+      <h2>未完了</h2>
+      <ul id="incompleteList" class="todo-list">
+
+        <!-- <li class="todo-item">
+          <div class="left-content">
+            <span class="category-tag">sample</span>
+            <p class="todo-title">ダミーtodo</p>
+          </div>
+          <div class="right-content">
+            <button class="complete-button">完了にする</button>
+            <button class="delete-button">削除</button>
+          </div>
+        </li> -->
+        
+      </ul>
+    </section>
+    
+    <!-- 未完了のTodo -->
+    <section class="complete-section" id="finished">
+      <h2>完了</h2>
+      <ul id="completeList" class="todo-list"></ul>
+    </section>
+  </div>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/for_render.js"></script>
+</body>
+</html>
